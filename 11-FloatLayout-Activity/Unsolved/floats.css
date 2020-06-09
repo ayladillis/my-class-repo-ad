@@ -13,30 +13,60 @@ body {
 header {
   padding: 20px;
   margin-bottom: 20px;
-  color: #333;
-  background: #ccc;
+  color: black;
+  background: orange;
 }
 
 section {
 }
 
 #left {
+  float: left;
+  background: teal;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 #middle {
+  float: left;
+  background:red;
+  color: white;
+  margin-bottom: 20px;
+  padding: 10px;
+
 }
 
 #right {
+  float: right;
+  background:teal;
+  color: white;
+  margin-bottom: 20px;
+  padding: 10px;
+
 }
 
 #full {
+
 }
 
 #division {
+  background: blue;
+  color: white
+
 }
 
 aside {
+  background: green;
+  color: white;
+  height: 50px;
+  width: 100px;
+  
 }
 
 footer {
+  color: black;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: orange;
 }
