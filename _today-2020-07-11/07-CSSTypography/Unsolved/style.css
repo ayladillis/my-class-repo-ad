@@ -1,9 +1,10 @@
 p {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+font-family: 'Shadows Into Light' cursive;
 }
 .kitty
 {
     font-weight: bold;
+    font-family: 'Metal Mania', cursive;
 }
 .puppy {
     font-size: 24px;
