@@ -5,7 +5,7 @@
 /* Normal Element Rule */
 a {
   font-size: 64px;
-  color: purple;
+  color: orangered;
 }
 
 /* Hover Pseudo Class:
@@ -13,8 +13,8 @@ a {
     over the preceding element.
 */
 a:hover {
-  background-color: red;
-  color: green;
+  background-color: lightpink;
+  color: black;
 }
 
 /* Focus Pseudo Class
@@ -23,8 +23,8 @@ a:hover {
     (in this case, after the link is clicked).
 */
 a:focus {
-  background-color: orange;
-  color: blue;
+  background-color: hotpink;
+  color: black;
 }
 
 /* Active Pseudo Class
@@ -33,6 +33,10 @@ a:focus {
     when the user releases their click.
 */
 a:active {
-  background-color: black;
-  color: white;
+  background-color: greenyellow;
+  color: black;
+}
+#example:hover {
+  background-color: powderblue;
+  color: black;
 }
