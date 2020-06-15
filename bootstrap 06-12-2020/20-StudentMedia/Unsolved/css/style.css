@@ -16,7 +16,7 @@ body {
   line-height: 27px;
 
   /* Visual */
-  background-color: #ccc;
+  background-color: orange c;
 }
 
 /*
@@ -43,7 +43,7 @@ body {
   float: left;
 
   /* Visual */
-  background: #fff;
+  background: lightpink;
 }
 
 #sidebar {
@@ -51,7 +51,7 @@ body {
   float: right;
 
   /* Visual */
-  background: #eee;
+  background: lightblue;
 }
 
 /*
@@ -61,12 +61,16 @@ body {
 @media screen and (max-width: 768px) {
   /* The body's bg color will be #333 */
   body {
-    background-color: #333;
+    background-color: greenyellow;
   }
 
   /* The wrapper's width will be 600px */
   .wrapper {
     width: 600px;
+    color: blueviolet;
+    background-color: burlywood;
+    padding: 20px;
+    border: 10px solid: red;
   }
 }
 
