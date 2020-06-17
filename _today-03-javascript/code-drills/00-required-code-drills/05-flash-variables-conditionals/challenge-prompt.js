@@ -1,5 +1,5 @@
 // declare a variable named farm
-var = farm
+var farm;
 
 
 // set that farm variable to be an array with the elements
