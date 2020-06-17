@@ -47,9 +47,9 @@ var numArray = [2, 65, 3, 7, 39, 22, 11, 94, 299, 9, 20, 21, 51, 37];
 // iterate through numArray and create an individual console log for every number greater than 50
 
 for (var i = 0; i < numArray.length; i++) {
-  if (numArray[i] > 50) [
+  if (numArray[i] > 50) {
     console.log(numArray[i])
-  ]
+  }
 }
 
 
@@ -63,16 +63,29 @@ for (var i = 0; i < numArray.length; i++) {
 
 
 // iterate through numArray and console log the sum of all the numbers
-
+var sum = 0;
+for (var i = 0; i < numArray.length; i++) {
+  sum = sum + numArray[i];
+}
+console.log(sum);
 
 
 // iterate through numArray and console log the sum of all the numbers greater than 50
-
-
+var sum = 0;
+for (var i = 0; i < numArray.length; i++) {
+  if (numArray[i] > 50) {
+    sum = sum + numArray[i];
+  }
+}
+console.log(sum);
 
 // iterate through numArray and console log the sum of all the even numbers
-
-
+var sum = 0;
+for (var i = 0; i < numArray.length; i++) {
+  if ((numArray[i]) % 2 === 0) {
+  }
+}
+console.log(sum);
 
 // This seperator is here to make your console logs a little easier to read 
 // by creating seperations between the different sections of the activity
@@ -83,28 +96,47 @@ var fruits = [
   "Apple", "Orange", "Banana", "Pomelo", "Apple", "Kiwi", "Peach", "Banana", "Grape", "Tomato", 
   "Kiwi", "Apple", "Watermelon", "Lemon", "Pomelo", "Apple", "Banana", "Peach", "Apricot", "Grape"];
 // iterate through fruits and console log the number of times "Apple" appears in the array
-
-
+var appleAppearance = 0;
+for (var i = 0; i < fruits.length; i++) {
+  if(fruits[i] === "Apple")  {
+    appleAppearance++;
+  }
+}
+console.log(appleAppearance);
 
 // iterate through fruits and console log the number of times "Peach" appears in the array
-
-
+var peachAppearance = 0;
+for (var i = 0; i < fruits.length; i++) {
+  if(fruits[i] === "Peach") {
+    peachAppearance
+  }
+}
+console.log(peachAppearance);
 
 // iterate through fruits and console log the number of fruits that start with "P" in the array
-
+var pFruitAppearance = 0;
+for (var i = 0; i < fruits.length; i++) {
+  if (fruits[i].charAt(0) === "P") {
+    pFruitAppearance++;
+  }
+}
+console.log(pFruitAppearance);
 
 
 // create a new empty array named uniqueFruits
-
+var uniqueFruits = [];
 
 // iterate through fruits and populate uniqueFruits with only unique values from fruits
 // you should a shorter array without repeated values
-
+for (var i =0; i < fruits.length; i++) {
+  if (!uniqueFruits.includes(fruits[i])) {
+    uniqueFruits.push(fruits[i]);
+  }
+}
 
 
 // console log out your uniqueFruits array
-
-
+console.log(uniqueFruits);
 
 
 // This seperator is here to make your console logs a little easier to read 
@@ -124,42 +156,75 @@ var twoDimArray = [
 console.log("     first array      ");
 // iterate through the first array inside twoDimArray and console log all the numbers less than 25
 
+for (var i = 0; i < twoDimArray[0].length; i++) {
+  if (twoDimArray[0][i] < 25) {
+    console.log(twoDimArray[0][i]);
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     second array      ");
 // iterate through the second array inside twoDimArray and console log all the numbers less than 25
-
+for (var i = 0; i < twoDimArray[1].length; i++){
+  if (twoDimArray[1][i] < 25) {
+    console.log(twoDimArray[1][i]);
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     third array      ");
 // iterate through the third array inside twoDimArray and console log all the numbers less than 25
-
+for (var i = 0; i < twoDimArray[2].length; i++){
+  if (twoDimArray[2][i] < 25) {
+    console.log(twoDimArray[2][i]);
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     fourth array      ");
 // iterate through the fourth array inside twoDimArray and console log all the numbers less than 25
-
+for (var i =0; i < twoDimArray[3].length; i++){
+  if (twoDimArray[3][i] < 25) {
+    console.log(twoDimArray[3][i]);
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     fifth array      ");
 // iterate through the fifth array inside twoDimArray and console log all the numbers less than 25
-
+for (var i =0; i < twoDimArray[4].length; i++){
+  if (twoDimArray[4][i] < 25) {
+    console.log(twoDimArray[4][i]);
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     odd numbers      ");
 // iterate through twoDimArray and the arrays inside of it and console log all the odd numbers
-
+for (var outerIndex = 0; outerIndex < twoDimArray.length; outerIndex++) {
+  for (var innerIndex = 0; innerIndex < twoDimArray[outerIndex][innerIndex]; innerIndex++) {
+    if ((twoDimArray[outerIndex][innerIndex] % 2) === 1) {
+      console.log(twoDimArray[outerIndex][innerIndex]);
+    }
+  }
+}
 
 
 // another seperator for your convenience
 console.log("     sum of multiples of 3      ");
 // iterate through twoDimArray and the arrays inside of it and 
 // console log the sum of all the numbers that are a multiple of 3
-
-
+for (var outerIndex = 0; outerIndex < twoDimArray.length; outerIndex++) {
+  for (var innerIndex = 0; innerIndex < twoDimArray[outerIndex][innerIndex]; innerIndex++) {
+    if ((twoDimArray[outerIndex][innerIndex] % 3) === 0) {
+      sum += twoDimArray[outerIndex][innerIndex];
+    }
+  }
+}
+console.log(sum)
 
