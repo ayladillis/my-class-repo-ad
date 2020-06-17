@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        for (var i=0; i<10; i++) {
+
+        var personHand = prompt("Would you like rock, paper or scissors?").toLowerCase
+
+        var options = ["rock ", "paper", "scissors"];
+
+        var random = Math.floor(Math.random()* 3);
+        var computerHand = options[random];
+
+        alert("The computer chose " + computerHand);
+
+        if(personHand === "rock " && computerHand === "paper"){
+            losses += 1;
+            alert("You have lost" + losses + "many times.");
+        }
+        
+        if(personHand === "rock " && computerHand === "scissors"){
+            wins +=1;
+            alert("You have won" + wins + "many times.");
+        }
+
+        if(personHand === "paper" && computerHand === "rock"){
+            wins +=1;
+            alert("You have won" + wins + "many times.");
+        }
+
+        if(personHand === "scissors" && computerHand === "rock"){
+            wins +=1;
+            alert("You have lost " + losses + "many times.");
+        }
+
+        if(personHand === "scissors" && computerHand === "paper"){
+            wins +=1;
+            alert("You have won " + wins + "many times.")
+        }
+
+        if(personHand === "paper" && computerHand === "scissors"){
+            wins +=1;
+            alert("You have lost " + losses + "many times.")
+        }
+        
+        if(personHand === computerHand){
+
+        }
+        
+        }
+
+    </script>
+</body>
+</html>

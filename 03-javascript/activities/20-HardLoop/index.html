@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Looping Through Arrays</title>
+  </head>
+  <body>
+
+    <h1>Hard Loop</h1>
+
+    <script>
+        var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+    //myFarm[0][0];
+
+    for(var i=0; i < myFarm.length; i++) {
+        console.log(myFarm[i]);
+
+        var animal = myFarm[i];
+        var firstLetter = animal[0];
+
+        if (myFarm[i][0] === "c" || myFarm[i][0] === "o"){
+            alert(myFarm[i] + "Starts with a c or an o!");
+        }
+        
+    } 
+    
+
+
+    </script>
+    
+  </body>
+</html>
