@@ -1,28 +1,35 @@
 // define a function "warble" that takes in a string as an argument,
 // appends " arglebargle" to the end of it, and returns the result
 
+function warble(str) {
+   var result; str + " arglebargle";
+   return result;
+}
 
 
 
 // console log the result of calling your "warble" function with the argument "hello"
 
-
+var result = warble("hello");
+console.log(result);
 
 // define a function "wibble" that takes a string as an argument,
 // console logs the argument, prepends "wibbly " to the argument, and returns the result
 
-
-
+function wibble(str) {
+    return "wibbly" + str;
+}
 
 // console log the result of calling your "wibble" function with the argument "bibbly"
 
-
+console.log(wibble("bibble"))
 
 
 // define a function "consoleSum" that takes in two numbers as arguments
 // and console logs the sum of those two numbers
-
-
+function consoleSum(num1, num2) {
+console.log(num1 + num2);
+}
 
 
 // testing your function - un-comment the following two lines when you have finished your function

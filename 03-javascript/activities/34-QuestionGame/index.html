@@ -2,27 +2,62 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Question Game</title>
+    <title>Questions Game!</title>
   </head>
   <body>
 
     <script>
+
+    //Array of questions for our game
+        var gameScore = 0;
+        var questionNumber = 0;
+        var questions = [
+            {q: "Are puppies cute?", a: "t"},
+            {q: "Is the sky blue?", a:"t"},
+            {q: "It's raining right now", a:"f"},
+            {q: "Wite is a color", a:"f"},
+            {q: "Madonna is a singer", a:"t"},
+            {q: "Ice Cream never melts", a:"f"},
+            {q: "Is Paris in France?", a:"t"}
+        ];
+
+       function gamePlay (){
+           if(questionNumber > question.length -1){
+               gameOver()
+           }else{
+               askQuestion();
+           }
+
+         }
+
+           function askQuestion(){
+           
+            var answer = confirm(question[questionNumber].q);
+
+            checkAnswer(answer);
+           }
+
+           function checkAnswer(answer){
+  if ((answer === true && questions[questionNumber].a === "t") ||
+      (answer === false && questions[questionNumber].a === "f")) {
+      // Increase score
+      gameScore++;
+      alert("Correct! " + gameScore + "/" + questions.length);
+    }
+    else {
+      alert("Wrong! " + gameScore + "/" + questions.length);
+    }
+
+    questionNumber++
+    playGame ()
+}
     
-//Variables
-        var question; 
+  function gameOver(){
+    alert("You got " + gameScore + "/" + questions.length + "\nGame Over");
+  }
 
-        var YES = true;
-        var NO = false;
+playGame ()
 
-    Boolean = prompt("is the Taj Mahal in India?");
-
-        if (question === true){
-            alert("Hooray! You've answered correct");
-        }
-
-        else if (question === false){
-            alert("Sorry, wrong answer");
-        }
 
 
 

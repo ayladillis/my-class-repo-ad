@@ -4,6 +4,7 @@ var keyEventsEl = document.querySelector("#key-events");
 
 function toggleDisplay(event) {
   var value = event.target.value;
+  console.log (event);
   if(value === "keydown") {
     mouseEventsEl.classList.add("hide");
     keyEventsEl.classList.remove("hide");
@@ -13,3 +14,7 @@ function toggleDisplay(event) {
     keyEventsEl.classList.add("hide");
   }
 }
+
+eventType.addEventListener("change", function(event){
+  toggleDisplay(event);
+})

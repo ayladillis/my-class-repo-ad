@@ -7,7 +7,7 @@ var descriptionEl = document.querySelector("#description");
 var closeEl = document.querySelector(".close");
 var saveBtn = document.querySelector("#save");
 
-var people = [{ name: "Bob" }];
+var people = [{ name: "Bob"}];
 var currentId = 0;
 
 function addPersonToList(event) {
@@ -24,9 +24,19 @@ function close() {
   modalEl.style.display = "none";
 }
 
-function handleClick() {
+function handleClick(event) {
+  event.preventDefault();
+  modalEl.style.display = "block";
   // Use event delegation to handle when the user clicks "edit"
+}
+
+function Save(event) {
+  people[description] = descriptionEl.value;
+  console.log(people);
 }
 
 closeEl.addEventListener("click", close);
 addBtn.addEventListener("click", addPersonToList);
+saveBtn.addEventListener("click", Save);
+
+peopleListEl.addEventListener ("click", handleClick);
