@@ -1,3 +1,5 @@
+//pointers to elements on the 
+//page (variables are the nouns of programing)!
 var addBtn = document.querySelector("#add-btn");
 var peopleListEl = document.querySelector("#people-list");
 var nameEl = document.querySelector("#name");
