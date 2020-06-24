@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html>
-   <body>
-      <head>
-         <title>HTML Radio Button</title>
-      </head>
-      <p>Gender</p>
-      <form>
-         <input type="radio" name="gender" value="male">Male
-         <br>
-         <input type="radio" name="gender" value="female">Female
-      </form>
-   </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <!-- View high scores -->
+      <button id="button-highscores" class="btn">View High Scores</button>
+    </div>
+    <!-- timer -->
+    <div>
+      <div>Timer: <span id="clock">75</span></div>
+    </div>
+  </div>
+  <!-- Questions -->
+  <div>
+    <card id="start-screen" class="opening-screen">
+      <h1>Coding Quiz Challenge</h1>
+      <button id="start-button">Start Quiz</button>
+
+    </card>
+    <card id="questions1" class="questions1">
+      <p>An animal that says, "Meow."</p>
+      <ul id="question-list">
+        <li id="answer1" onclick="testAnswer1()">cat</li>
+        <li id="answer2" onclick="testAnswer2()">dog</li>
+        <li id="answer3" onclick="testAnswer3()">bat</li>
+      </ul>
+    </card>
+
+    <card id="questions2" class="questions2">
+      <p>Commonly used data types DO NOT include:</p>
+      <ul id="question-list">
+         <li id="answer1" onclick="testAnswer1()">cat</li>
+         <li id="answer2" onclick="testAnswer2()">dog</li>
+         <li id="answer3" onclick="testAnswer3()">bat</li>
+       </ul>
+    </card>
+    
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,57 +1,65 @@
-//destructuring in arrays
+let startButton = document.querySelector("#start-button");
+let startScreen = document.getElementById("start-screen");
+let questions1 = document.getElementById("questions1");
+let questionList = document.getElementById("question-list");
+let answer1 = document.getElementById("answer1");
+let answer2 = document.getElementById("answer2");
+let answer3 = document.getElementById("answer3");
+let testAnswer = "cat";
+let seconds = 75;
 
-function sumAndMultiply(a, b) {
-    return [a+b, a*b]
+startButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  timer();
+  startScreen.setAttribute("style", "display: none;");
+  questions1.setAttribute("style", "display: block;");
+});
+
+//questions
+function testAnswer1() {
+  if (answer1.innerHTML === testAnswer) {
+    alert("Correct");
+  } else {
+    alert("Wrong");
+  }
+}
+function testAnswer2() {
+  if (answer2.innerHTML === testAnswer) {
+    alert("Correct");
+  } else {
+    alert("Wrong");
+  }
+}
+function testAnswer3() {
+  if (answer3.innerHTML === testAnswer) {
+    alert("Correct");
+  } else {
+    alert("Wrong");
+  }
 }
 
-const [sum, multiply, division = 'no division'] = sumAndMultiply(2, 3)
+function startButton(){
+    timer();
+    startButton.style.display = "none";
+}
 
-console.log(sum)
-console.log(multiply)
+//timer
 
-//destructuring in objects
+function tick() {
+  if (seconds > 0) {
+    seconds -=1;
+    clock.innerHTML = seconds;
+    timer();
+  } else {
+    stopClock();
+    clearTimeout(t);
+  }
+}
+function timer() {
+  t = setTimeout(tick, 1000);
+}
+function stopClock () {
+  clearTimeout(t);
+}
 
-
-    const personTwo = {
-        name: 'Sally',
-        age: 32,
-        favoriteFood: 'Melon',
-        address: {
-            city: 'Somewhere else',
-            state: 'Any of them'
-        }
-    }
-
-    const { name: firstName, age, address: { city } } = personTwo
-
-    console.log(firstName)
-    console.log(age)
-    
-
-    //Using object deconstruction inside of function inside of the arguments
-
-    function printUser({name, age, favoriteFood}) {
-        console.log('Name is: ${name}. Age is ${age}. Food is ${favoriteFood}')
-    }
-    
-    printUser(personTwo)
-
-    //warmup "write a function (in sudocode) that takes in an array of number and 
-    //outputs the maximum number"
-
-    // // 1. define a function of numbers 
-    //    1.5 look at every number inorder to see which is the max
-    // // 2. apply a string of numbers 
-    //    2.5 use a for loop 
-    // // 3. use Math.max to 
-
-    solution
-    
-    var findMax = function (numArr) {
-        var maxNum;
-        for (var i = 0; i < numArr.length; i++) {
-            maxNum = numArr[i]
-        }
-        return maxNum;
-    }
 
