@@ -60,6 +60,7 @@
       // Create a button with unique identifiers based on what number it is in the list. Again use jQuery to do this.
       // Give your button a data attribute called data-to-do and a class called "checkbox".
       // Lastly add the letter X inside.
+      
       var toDoClose = $( "<button>");
 
         toDoClose.attr("date-to-do", toDoCount);
@@ -68,16 +69,17 @@
 
 
       // Append the button to the to do item
-
+        toDoItem = toDoItem.prepend(toDoClose);
 
       // Add the button and toDoItem to the to-dos div
+    $("to-dos").append(toDoItem);
 
 
       // Clear the textbox when done
-
+        $("to-dos").val(""); 
 
       // Add to the toDoCount
-
+        toDoCount++; 
     });
 
     //  When a user clicks a check box then delete the specific content
@@ -86,13 +88,13 @@
     $(document.body).on("click", ".checkbox", function() {
 
       // Get the number of the button from its data attribute and hold in a variable called  toDoNumber.
-
+      var toDoNumber = $(this).attr("data-to-do");
 
       // Select and Empty the specific <p> element that previously held the to do item number.
       //See: 
       //https://api.jquery.com/remove/
       //https://api.jquery.com/empty/
-
+        $("#item-" + toDoNumber).remove();
 
     });
   </script>

@@ -13,6 +13,7 @@ startButton.addEventListener('click', function(event) {
   timer();
   startScreen.setAttribute("style", "display: none;");
   questions1.setAttribute("style", "display: block;");
+  
 });
 
 //questions
@@ -38,10 +39,6 @@ function testAnswer3() {
   }
 }
 
-function startButton(){
-    timer();
-    startButton.style.display = "none";
-}
 
 //timer
 

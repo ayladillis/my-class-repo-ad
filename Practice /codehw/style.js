@@ -175,3 +175,4 @@ function scoreRender(){
 const scorePerCent = Math.round(100 * score/questions.length);
     
 }
+
