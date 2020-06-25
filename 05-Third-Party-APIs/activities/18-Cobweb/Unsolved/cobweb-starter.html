@@ -17,6 +17,7 @@
 
   // Here we are given a cob-web of items. Let's dig in and grab the items we need.
   var theCobWeb = {
+    //object of theCobWeb data
     biggestWeb: {
       item: "comb",
       biggerWeb: {
@@ -34,13 +35,21 @@
     }
   };
 
+// refering to "comb"
   console.log(theCobWeb.biggestWeb.item);
+  
 
 // Create the code necessary to print each of the following lines using the object above:
 // "I found my glasses!"
+console.log("I found my" + theCobWeb.biggestWeb.biggerWeb.item[0] + "!");
 // "I found my toothbrush!"
+console.log("I found my" + theCobWeb.biggerWeb.biggerWeb.smallerWeb.item + "!");
 // "I found my headphones!"
+console.log("I found my" + theCobWeb.biggestWeb.otherBigWeb.item + "!");
 // "I found my homework!"
+console.log("I found my" + theCobWeb.biggestWeb.biggerWeb.smallerWeb.tinyWeb.item[3] + "!");
+
+
 
 
 

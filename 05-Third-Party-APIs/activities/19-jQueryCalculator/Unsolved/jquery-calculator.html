@@ -75,9 +75,112 @@
 
 <script type="text/javascript">
 
+//Psudocode:
+//0. how will we capture button clicks? create function to run calculator
+
+// as number is entered append 
+// create a function to let us know when the clicker is clicking on the first-number, second-number and operator 
+
+// 1. using ".click" to capture each button click on the card-body
+
+//2. every number clicked will be concatanated into a string and displayed on results card.
+
+//3. use a "if statement" to add the operators between the numbers we want to calculate
+
+//4. apply function to store numbers on the results card
+
+//5.   $( "#other" ).click(function() {
+//     $( "#target" ).click();
+//   });
+
 $(document).ready(function() {
 
 // Your code here...
+
+var firstNumber = "";
+var secondNumber = "";
+var operator = "";
+var result = "";
+
+// var isOperatorChose = false;
+// isCalculated = false:
+
+// $("first-number, #second-number, #operator, #result").empty();
+// }
+  // if (isCalculated) {
+  //   return false 
+  // }
+
+  // if (isOperatorChosen) {
+  //   secondNumber += $(this).val();
+  //   $("#second-number").text(firstNumber)
+  // }else{
+  //   firstNumber = firstNumber + $(this).val();
+  //   $("#first-number").text(firstNumber);
+  // }
+
+}
+
+// functions for operators
+$("#button-plus").click(function(){
+  $("#operator").append($("#button-plus").val())
+})
+
+$("#button-minus").click(function(){
+  $("#operator").append($("#button-minus").val())
+})
+
+$("#button-multiply").click(function(){
+  $("#operator").append($("#button-multiply").val())
+})
+
+$("#button-power").click(function(){
+  $("#operator").append($("#button-power").val())
+})
+
+// functions for numbers
+$("#button-1").click(function(){
+    $("#first-number").append($("#button-1").val())
+  })
+
+$("#button-2").click(function(){
+    $("#first-number").append($("#button-2").val())
+  })
+
+$("#button-3").click(function(){
+    $("#first-number").append($("#button-3").val())
+  })
+
+$("#button-4").click(function(){
+    $("#first-number").append($("#button-4").val())
+  })
+
+$("#button-5").click(function(){
+    $("#first-number").append($("#button-5").val())
+  })
+
+$("#button-6").click(function(){
+    $("#first-number").append($("#button-6").val())
+  })
+
+$("#button-7").click(function(){
+    $("#first-number").append($("#button-7").val())
+  })
+
+$("#button-8").click(function(){
+    $("#first-number").append($("#button-8").val())
+  })
+
+$("#button-9").click(function(){
+    $("#first-number").append($("#button-9").val())
+  })
+
+$("#button-0").click(function(){
+    $("#first-number").append($("#button-0").val())
+  })
+
+
+
 
 
 

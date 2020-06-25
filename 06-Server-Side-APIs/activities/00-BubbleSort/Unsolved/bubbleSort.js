@@ -8,6 +8,33 @@
 // use Google to read up on the concept.
 // Spend about 10 minutes pseudocoding your solution before writing any JavaScript.
 
+// Psudocode
+
+// Step One
+//Q: What is the goal?
+//A: sort the numbers array in order
+//Q: How will I sort through my array?
+//A: using bubble sort algorithm
+
+//Step Two
+//Q: What is the first step to bubble sorting?
+//A: looking at each number in the array 
+//Q: How will it work?
+//A: By comparing the first number with the second and so on
+
+//Step Three
+//Q: What are we comparing agianst?
+//A: Which number is larger
+//Q: How do the numbers move up?
+//A: for loop 
+//Q: How will the for loop work?
+//A: if the first number is larger then switch else no change
+
+// Step Four
+//Q: How do I get my unsortedArr to show on the browser?
+//A: by setting up a print function 
+
+
 // Use the array provided below.
 
 // Display the unsorted array in the `#start` div of `index.html`.
@@ -16,6 +43,7 @@
 // the sorted result should be displayed in the `#result` div.
 
 // DO NOT USE JQUERY TO SELECT ELEMENTS. ONLY USE VANILLA JS.
+
 
 
 var unsortedArr = [
@@ -68,9 +96,39 @@ var unsortedArr = [
   181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 ];
 
+//one way to bubble sort
+function sort(arr) {
+  for (var j = 0; j < arr.length; j++){
+    for (var i = 1; i < arr.length; i++) {
+      if (arr[i] < arr[i - 1])
+        var curr = arr[i]
+        var prev = arr[i - 1]
+        arr[i] = prev;
+        arr[i - 1] = curr;
+    }
+  }
+  return arr
+}
+console.log(sort(unsortedArr));
 
 
+//another way to bubble sort
+function bubbleSort(arr) {
+  var sorted = false;
 
+  while (!sorted) {
+    sorted = true;
+    //loop through array
+    for (var i = 0; i < arr.length - 1; i++) {
+      //if the current element is larger than the next element, swap them
+      if (arr[i] > arr[i +1]) {
+        sorted = false;
+        var temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
 
-
-
+  return arr;
+}

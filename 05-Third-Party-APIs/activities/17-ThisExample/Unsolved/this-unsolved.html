@@ -14,6 +14,7 @@
     // --------------------------------------------------
     // What is "this" going to print?
 
+//gloabl scope refering to 'window'
     console.log(this);
 
 
@@ -49,10 +50,10 @@
         this.name = "Star Powerup";
 
         var changeName = function(newName) {
-          this.name = newName;
+          this.name = newName; //setting it on the window object 
         };
         changeName("Blue Shell");
-        console.log(this);
+        console.log(this); //refers to whole object outside of nested function
       }
     };
     myObj.yell();
@@ -67,6 +68,7 @@
       yell: function() {
 
         // This line is important!
+        //here we make use of the 'thisObject' variable to hold the state of "this"
         var thisObject = this;
 
         this.name = "Star Powerup";
