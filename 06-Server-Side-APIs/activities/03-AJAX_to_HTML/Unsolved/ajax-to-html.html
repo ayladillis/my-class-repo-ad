@@ -26,9 +26,19 @@
           <td>2014</td>
           <td>Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow</td>
         </tr>
+
+        <tr>
+          <td id="movieOneTitle"></td>
+          <td id="movieOneYear"></td>
+          <td id="movieOneActors"></td>
+        </tr>
+
+        <tr>
+          <td id="movieTwoTitle"></td>
+          <td id="movieTwoYear"></td>
+          <td id="movieTwoActors"></td>
+        </tr>
         
-
-
         <!-- Insert additional movie rows here -->
       </tbody>
     </table>
@@ -46,11 +56,42 @@
       console.log(response);
       var title = response.Title;
       var year = response.Year;
+      var actors = response.Actors;
+
+      $("#movieOneTitle").append(title);
+      $("#movieOneYear").append(year);
+      $("#movieOneActors").append(actors);
+
+
+      
+      console.log(response.Title);
+
+
 
       // Create and save a reference to new empty table row
       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
       // Append the td elements to the new table row
       // Append the table row to the tbody element
+    });
+
+    var movie = "Frozen";
+    var queryURL = "https://www.omdbapi.com/?t=" + movieTwo + "&y=&plot=short&apikey=trilogy";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      var title = response.Title;
+      var year = response.Year;
+      var actors = response.Actors;
+
+      $("#movieTwoTitle").append(title);
+      $("#movieTwoYear").append(year);
+      $("#movieTwoActors").append(actors);
+      
+      console.log(response.Title);
+
     });
 
     // Repeat the above logic to add rows for two more movies of your choice

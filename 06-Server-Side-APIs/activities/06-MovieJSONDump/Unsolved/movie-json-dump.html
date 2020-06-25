@@ -42,6 +42,16 @@
 
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
         // and display it in the div with an id of movie-view
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response){
+          console.log(response);
+          
+          $("#movie-view").text(JSON.stringify(response));
+          $("#movie-view").append(JSON.stringify(response));
+        });
+
 
         // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
 

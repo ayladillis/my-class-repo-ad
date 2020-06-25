@@ -30,6 +30,8 @@
       <input id="add-movie" type="submit" value="Add a Movie">
     </form>
 
+    <div id="buttons-content"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
@@ -39,6 +41,14 @@
       function displayMovieInfo() {
 
         // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
+        $ajax({
+          url: queryURl,
+          method: "GET"
+        }).then(function(response){
+
+          console.log();
+
+        })
 
       }
 

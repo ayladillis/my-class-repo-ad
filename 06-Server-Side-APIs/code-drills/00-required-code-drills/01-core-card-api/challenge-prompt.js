@@ -8,11 +8,12 @@ $(document).submit(function () {
         method: "GET"
     }).then(function (response) {
         // console.log the response 
-
+        console.log(response);
         // console.log the remaining cards
-
+        console.log(response.remaining)
         // console.log the deck id too
-
+        console.log(response.deck_id);
+        console.log(response.success);
     });
 
 })
