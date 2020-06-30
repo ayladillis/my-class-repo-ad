@@ -6,8 +6,18 @@ $(document).ready(function() {
     "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken",
     "capybara", "teacup pig", "serval", "salamander", "frog"
   ];
+function retriveArray(){ 
+  //retrive from local storage the value assosiated with the key of animals 
+var animals = localStorage.getItem("animals");
+//if animals is null, does not return, then make variables animals equal to empty array 
+//JSONstringafy going into local storage and parse taking out of local storge
+//set animal array 
+}
+
+console.log(animals);
 
   // function to make buttons and add to page
+  //arrayToUse looks at animals array
   function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
     $(areaToAddTo).empty();
 
@@ -37,7 +47,7 @@ $(document).ready(function() {
         var results = response.data;
 
         for (var i = 0; i < results.length; i++) {
-          var animalDiv = $("<div class=\"animal-item\">");
+          var animalDiv = $("<div class=\"city-item\">");
 
           var rating = results[i].rating;
 
@@ -61,19 +71,19 @@ $(document).ready(function() {
       });
   });
 
-  $(document).on("click", ".animal-image", function() {
+  // $(document).on("click", ".animal-image", function() {
 
-    var state = $(this).attr("data-state");
+  //   var state = $(this).attr("data-state");
 
-    if (state === "still") {
-      $(this).attr("src", $(this).attr("data-animate"));
-      $(this).attr("data-state", "animate");
-    }
-    else {
-      $(this).attr("src", $(this).attr("data-still"));
-      $(this).attr("data-state", "still");
-    }
-  });
+  //   if (state === "still") {
+  //     $(this).attr("src", $(this).attr("data-animate"));
+  //     $(this).attr("data-state", "animate");
+  //   }
+  //   else {
+  //     $(this).attr("src", $(this).attr("data-still"));
+  //     $(this).attr("data-state", "still");
+  //   }
+  // });
 
   $("#add-animal").on("click", function(event) {
     event.preventDefault();

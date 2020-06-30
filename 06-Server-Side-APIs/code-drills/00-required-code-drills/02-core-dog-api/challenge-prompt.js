@@ -15,10 +15,10 @@ $(document).submit(function () {
             method: "GET"
         }).then(function (response) {
             // console.log the response 
-            
-            
+            conssole.log(response);
+            console.log(response.message)
             // append the image within the response to the page 
-
+            $(".dogImage").append("<img src=" + response.message + ">");
         });
     }
 })
