@@ -76,7 +76,7 @@
       url: 'https://newsapi.org/v2/top-headlines?' +
         'country=us&' +
         // This solution does not include an API key. You will have to fill in the API key in the query url
-        'apiKey=???????',
+        'apiKey=e69bb201f88d45018d24619f57877cba',
       method: "GET"
     }).then(function (response) {
       console.log(response);
@@ -84,7 +84,10 @@
         if (!response.articles[i].author) {
           response.articles[i].author = "I wrote it!"
         }
-        $(".appendMe").append('<div><h3 class="title">' + response.articles[i].title + '</h3> <p class="author">' + response.articles[i].author + '</p> <p class="desc">' + response.articles[i].description + '</p> <hr></div>')
+        $(".appendMe").append('<div><h3 class="title">' + 
+          response.articles[i].title + '</h3> <p class="author">' + 
+            response.articles[i].author + '</p> <p class="desc">' + 
+              response.articles[i].description + '</p> <hr></div>')
 
       }
     });

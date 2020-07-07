@@ -63,7 +63,8 @@
   </div>
 
   <script>
-    // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+    // Some APIs will give us a cross-origin (CORS) error. This small function is a fix for that error. 
+    //You can also check out the chrome extenstion (https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
     jQuery.ajaxPrefilter(function (options) {
       if (options.crossDomain && jQuery.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
@@ -71,24 +72,30 @@
     });
 
 
-    // STEP 4: Based on your research of this API, assign a value to queryURL you think is appropriate to retrieve the top news stories in the US. 
-    var queryURL = "";
-
+    // STEP 4: Based on your research of this API, assign a value to queryURL you think is appropriate to 
+    //retrieve the top news stories in the US. 
 
     $.ajax({
-      url: queryURL, 
+      url: "http://newsapi.org/v2/top-headlines?country=us&apiKey=e69bb201f88d45018d24619f57877cba",
       method: "GET"
-    }).then(function (response) {
-      
+    }).then(function (response) { 
       // STEP 5. This is where we'll render our responses to the DOM. 
-      
+      console.log(response);
         // Because we want to render multiple responses, we will need to use a loop. 
-
-        // Jquery gives us a few methods to render content to our app. .text(), .html(), .append(), .prepend(). Use whichever of these you find most appropriate in this case. Remember, our goal is to render the articles inside of the div with the class of news.
-
+        for (var i = 0; i < results.articles.length; i++) {
+          if (!response.articles[i].author) {
+            response.articles[i].author = "I wrote it!"
+          }
+        // Jquery gives us a few methods to render content to our app. .text(), .html(), .append(), .prepend(). 
+        //Use whichever of these you find most appropriate in this case. Remember, our goal is to render the articles inside of the div with the class of news.
+      
         // Check out the .news div for a clue as to which method we should use in this context.
 
-        // Render the content in this format: 
+        $(".appendMe").append('<div><h3 class="title">' + 
+          response.articles[i].title + '</h3> <p class="author">' + 
+            response.articles[i].author + '</p> <p class="desc">' + 
+              response.articles[i].description + '</p> <hr></div>')
+
         //
         // <div>
         //   <h3 class="title">TITLE HERE</h3>
@@ -101,7 +108,7 @@
         // The author of each article should go in the p tag with the class of author
         // The description of the article should go in the p tag with the class of desc
 
-
+        }
 
 
       // Step 6. By now, you should have been able to render all of the articles to the news div.

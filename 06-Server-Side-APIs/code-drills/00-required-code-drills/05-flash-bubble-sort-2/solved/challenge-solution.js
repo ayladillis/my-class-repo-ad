@@ -9,7 +9,9 @@
 
 function bubbleSortTwo(arr) {
     // ================= code goes here ===========================
+    // define boolean statement
     var swap = true;
+    // build a while loop
     while (swap) {
         swap = false;
         for (var i = 0; i < arr.length - 1; i++) {
