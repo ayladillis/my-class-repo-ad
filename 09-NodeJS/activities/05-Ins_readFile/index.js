@@ -20,6 +20,7 @@ var fs = require("fs");
 //1. the file we want to read
 // 2. the encoding format we want to use to read the file, 
 // and, 3. a callback.
+//error is a placeholder
 fs.readFile("data.csv", "utf8", function(error, data) {
 
   if (error) {
