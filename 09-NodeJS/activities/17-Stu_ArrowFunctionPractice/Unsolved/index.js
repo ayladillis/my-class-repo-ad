@@ -1,5 +1,5 @@
 // 1. funnyCase makes each letter in a string the opposite case as the one before
-var funnyCase = function(string) {
+var funnyCase = string => {
   var newString = "";
   for (var i = 0; i < string.length; i++) {
     if (i % 2 === 0) newString += string[i].toLowerCase();
@@ -14,7 +14,7 @@ console.log(funnyCase("You can't just do whatever you want all the time!"));
 // --------------------------------------------------------------------------
 
 // 2. Map lets you loop over an array and modify the elements inside
-var map = function(arr, cb) {
+var map = (arr, cb) => {
   var result = [];
   for (var index = 0; index < arr.length; index++) {
     var currentElement = arr[index];
@@ -35,7 +35,7 @@ console.log(doubled);
 // --------------------------------------------------------------------------
 
 // 3. filter lets you loop over an array and remove elements
-var filter = function(arr, cb) {
+var filter = (arr, cb) => {
   var result = [];
   for (var index = 0; index < arr.length; index++) {
     var currentElement = arr[index];

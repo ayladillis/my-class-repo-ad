@@ -1,5 +1,7 @@
 // Avoid using arrow functions for object methods
+// *** Dont use fat arrow syntax to console.log this way***
 var dog = {
+//key     value 
   name: "Lassie",
   sound: "Woof!",
   makeSound: () => console.log(this.sound),
