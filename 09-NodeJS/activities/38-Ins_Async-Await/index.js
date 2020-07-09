@@ -9,7 +9,7 @@ async function getMovie() {
       message: "Search a movie:",
       name: "movie"
     });
-
+//object destructering with { data }
     const { data } = await axios.get(
       `https://www.omdbapi.com/?t=${movie}&apikey=trilogy`
     );

@@ -12,9 +12,9 @@ In this activity you will write code to get a random joke from an API, append th
 
   * This API requires some additional configuration be passed to axios in order to work.
 
-* Run the `index.js` file to examine the response from the API. You should notice that an object containing a random joke is returned each time.
+<!-- * Run the `index.js` file to examine the response from the API. You should notice that an object containing a random joke is returned each time. -->
 
-* Append the `joke` property of the response data to a file named `jokes.txt`.
+<!-- * Append the `joke` property of the response data to a file named `jokes.txt`. -->
 
 * After appending the joke, read from the `jokes.txt` file and print its entire contents to the console.
 

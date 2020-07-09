@@ -18,8 +18,8 @@ axios.get("https://icanhazdadjoke.com/", config)
     console.log(`success`);
   });
 
-  fs.readFile(`jokes.txt`, (err, data) => {
-    if (err) throw err;
+  // fs.readFile(`jokes.txt`, (err, data) => {
+  //   if (err) throw err;
     // console.log(data);
-  })
+  // })
 });

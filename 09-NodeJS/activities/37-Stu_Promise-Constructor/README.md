@@ -4,7 +4,7 @@ In this activity you will refactor a callback-based asynchronous function to uti
 
 ## Instructions
 
-* Open `Unsolved/index.js` and take a moment to examine the provided code.
+<!-- * Open `Unsolved/index.js` and take a moment to examine the provided code. -->
 
 * When the provided code is run, the `waitFor` function waits `2` (or however many seconds are provided) and then prints a message. If `seconds` is not a number or is a number less than 1, an error is thrown instead.
 

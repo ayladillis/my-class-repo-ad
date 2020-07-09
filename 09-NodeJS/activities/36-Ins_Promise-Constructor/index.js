@@ -11,7 +11,7 @@ function readFileAsync(path, encoding) {
     });
   });
 }
-
+// .then if funciton is right and .catch if its wrong!
 readFileAsync("example.txt", "utf8")
   .then(function(data) {
     console.log(data);
@@ -38,7 +38,6 @@ function myCallBack(isErr, results){
 
     return results
 }
-
 
 console.log(readFileCallBack("example.txt", "utf8", myCallBack));
 
