@@ -6,7 +6,7 @@
 // console log "Hello World"
 
 // ---------- code starts here ----------
-
+console.log("HELLO WORLD");
 
 
 
@@ -20,7 +20,7 @@
 // ---------- code starts here ---------- 
 
 
-
+console.log(process.argv);
 
 
 
@@ -34,7 +34,11 @@
 // ---------- code starts here ---------- 
 
 
+var argOne = process.argv[2]
+var argTwo = process.argv[3]
 
+console.log(argOne)
+console.log(argTwo)
 
 
 

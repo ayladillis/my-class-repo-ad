@@ -12,7 +12,6 @@ function fizzBuzz(n) {
     } else if (allNums[i] % 5 === 0) {
       console.log("buzz")
     } else if (allNums[i] % 3 === 0) {
-      
       console.log("fizz")
     } else {
       console.log(allNums[i])
