@@ -6,19 +6,19 @@ In this activity you will use objects to create a mini banking application.
 
 Update the `createMiniBank` function to achieve the following:
 
-1. Add another private value of `statement` that should be set to an array with one value, `0`. This array will contain all transactions made with the MiniBank objects.
+<!-- 1. Add another private value of `statement` that should be set to an array with one value, `0`. This array will contain all transactions made with the MiniBank objects. -->
 
-2. Add a `setBalance` function that takes a value and updates the private `statement` value to it.
+<!-- 2. Add a `setBalance` function that takes a value and updates the private `statement` value to it. -->
 
-3. Write an `updateStatement` function that takes in a number and pushes it to the `statement` array.
+<!-- 3. Write an `updateStatement` function that takes in a number and pushes it to the `statement` array. -->
 
-4. Write a `getStatement` function that returns the `statement` array.
+<!-- 4. Write a `getStatement` function that returns the `statement` array. -->
 
-5. Write a `printStatement` function that prints each element in the in the `statement` array on its own line.
+<!-- 5. Write a `printStatement` function that prints each element in the in the `statement` array on its own line. -->
 
-6. Write a `deposit` function that takes a value and updates the `balance` value using the `setBalance` function.
+<!-- 6. Write a `deposit` function that takes a value and updates the `balance` value using the `setBalance` function. -->
 
-7. Write a `withdraw` function that takes a value and subtracts it from the `balance`.
+<!-- 7. Write a `withdraw` function that takes a value and subtracts it from the `balance`. -->
 
 8. Return the `printBalance`, `printStatement`, `deposit`, `withdraw` functions from the `createMiniBank` function.
 
