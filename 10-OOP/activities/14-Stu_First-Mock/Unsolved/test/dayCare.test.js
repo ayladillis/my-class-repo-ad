@@ -24,10 +24,16 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
+      const mock = jest.spyOn(console, "log");
+      mock.mockImplementation(() => {});
 
       dayCare.addChild(child);
 
       expect(dayCare.children.length).toEqual(0);
+      expect(mock).toBeCalledWith(
+        "Unable to add child, they are over the age limit"
+      );
+      mock.mockRestore();
     });
 
     it("should not add a child if already at capacity", () => {

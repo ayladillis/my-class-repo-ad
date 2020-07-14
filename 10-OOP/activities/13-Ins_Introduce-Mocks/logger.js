@@ -15,7 +15,7 @@ function Logger() {
       white: "\x1b[37m"
     };
 
-    for (let farley in colors) {
+    for (let key in colors) {
       // Each color method calls console.log with the color as the first argument,
       // followed by any additional arguments
       Logger.prototype[key] = function(...args) {
