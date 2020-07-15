@@ -7,7 +7,8 @@ class Restaurant {
     this.orders = [];
     this.revenue = 0;
   }
-
+// adding the orders item price then adding to revenu
+//then pushing spesific order to the object then print revenu!
   takeOrder(order) {
     this.revenue += order.item.price;
     this.orders.push(order);

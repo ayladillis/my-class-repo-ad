@@ -1,0 +1,15 @@
+numbs = [1, 2, 3, 4, 5 ]
+
+write a function called numbers 
+
+var filter = function(arr, cb) {
+    var newArr = [];
+    
+    for (var i = 0; i < arr.lenth; i++){
+        var cbOutput = cb(arr[i]);
+        if(cbOutput){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
+}
