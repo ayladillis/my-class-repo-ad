@@ -16,4 +16,10 @@ function jokeRequestTwo(request, response) {
 var serverOne = http.createServer(jokeRequestOne);
 var serverTwo = http.createServer(jokeRequestTwo);
 
-serverOne.listen(PORTONE)
+serverOne.listen(PORTONE, function() {
+    console.log("Server listening on: http://localhost:" + PORTONE);
+});
+
+serverTwo.listen(PORTTWO, function() {
+    console.log("Server listening on: http://localhost:" + PORTTWO)
+});
