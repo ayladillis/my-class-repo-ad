@@ -34,7 +34,7 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-// What does this route do?
+// What does this route do? sending back entire array of characters
 app.get("/api/characters", function(req, res) {
   return res.json(characters);
 });

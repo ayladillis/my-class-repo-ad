@@ -1,4 +1,5 @@
 var http = require("http");
+var fs = require("fs");
 
 var PORT = 8080;
 
@@ -18,16 +19,65 @@ function handleRequest(req, res) {
 
     switch (path){
         case "/":
-            return displayRoot(res);
+            return displayindex(res);
 
-        case "/favFood":
-            return displayfavFood(res);
+        case "/food":
+            return displayfood(res);
 
-        case "/favMovie":
-            return displayfavMovie(res);
+        case "/movie":
+            return displaymovie(res);
         
-        case "/favCSS":
-            return displayfavCSS(res);
+        case "/framework":
+            return displayframework(res);
     }
+
+    function displayindex(res){
+
+    fs.readFile(__dirname + "/index.html", function(err, data) {
+      if (err) throw err;
+      // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+      // an html file.
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    });
+  }
+
+
+function displayfood(res){
+
+    fs.readFile(__dirname + "/food.html", function(err, data) {
+      if (err) throw err;
+      // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+      // an html file.
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    });
+  }
+
+
+function displaymovie(res){
+
+    fs.readFile(__dirname + "/movie.html", function(err, data) {
+      if (err) throw err;
+      // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+      // an html file.
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    });
+  }
+
+
+function displayframework(res){
+
+    fs.readFile(__dirname + "/framework.html", function(err, data) {
+      if (err) throw err;
+      // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+      // an html file.
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    });
+  }
+
+
 
 }

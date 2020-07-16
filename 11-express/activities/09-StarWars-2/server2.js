@@ -31,7 +31,7 @@ var characters = [{
 app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
-
+//serves json content
 app.get("/api/:character", function(req, res) {
 
   var chosen = req.params.character;
