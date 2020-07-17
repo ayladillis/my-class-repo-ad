@@ -11,6 +11,12 @@
 //   chicken: 68,
 //   sasha: 8
 // }
+
+var express = require("express");
+
+var app = express();
+var PORT = 7500;
+
 var input = ["50 jerome.code.org", "30 ricky.code.com", "60 robert.chicken.com", "8 sasha.chicken.org"]
 
 function getNumVisits(arr) {
