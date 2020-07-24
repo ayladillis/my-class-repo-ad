@@ -1,0 +1,20 @@
+{
+  "name": "ucb-ber-fsf-ft-06-2020-u-c",
+  "version": "1.0.0",
+  "description": "<hr>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ucb.bootcampcontent.com:UCB-Coding-Bootcamp/ucb-ber-fsf-ft-06-2020-u-c.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.3.2",
+    "mysql": "^2.18.1"
+  }
+}
