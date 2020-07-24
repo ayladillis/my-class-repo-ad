@@ -1,18 +1,18 @@
 * **Instructions**
 
-  * Create a full-stack application with Express, MySQL and Handlebars.
+  <!-- * Create a full-stack application with Express, MySQL and Handlebars. -->
 
     * HINT: this web application will be very similar to the app we just explored. Please feel free to leverage that code when creating this code.
 
-  * Create a `schema.sql` file. Inside of that file, do the following:
+  <!-- * Create a `schema.sql` file. Inside of that file, do the following: -->
 
-    1. Make a database called moviePlannerDB
+    <!-- 1. Make a database called moviePlannerDB -->
 
-    2. Inside of that database make a movies table which will contain a movie column and an id column. The id will be automatically incremented while also being the primary key.
+    <!-- 2. Inside of that database make a movies table which will contain a movie column and an id column. The id will be automatically incremented while also being the primary key. -->
 
-    3. Run your `schema.sql` file within MySQL Workbench before moving onto the next steps.
+    <!-- 3. Run your `schema.sql` file within MySQL Workbench before moving onto the next steps. -->
 
-  * In your server.js file, you will create four routes: `get`, `post`, `put`, and `delete`.
+  <!-- * In your server.js file, you will create four routes: `get`, `post`, `put`, and `delete`. -->
 
     * Render the main `index.handlebars` when the `'/'` get route is hit with all of the movies from the movies table.
 

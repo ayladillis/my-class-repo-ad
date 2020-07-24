@@ -1,4 +1,5 @@
-const { notDeepEqual } = require("assert")
+const { notDeepEqual } = require("assert");
+const { reverse } = require("dns");
 
 var map = function(arr, cb) {
     var newArr = []
@@ -24,4 +25,26 @@ var some = function(arr, cb){
         }
     }
     
+}
+
+//use map to iterate through the number 
+// return the reversed digits 
+// convert to a string
+
+var reverseDigit = function (num) {
+    var newNum = ' ';
+    var numStr = numStr
+}
+
+// create a variable titled 'str' set equal to 'Ace Ventura'
+// set the variable equal to str.lowercase to switch all letters to lowercase
+
+var str = 'Ace Ventura';
+str = str.toLowerCase();
+
+// solution
+
+var singleWord = function (str){
+    var newStr = 
+    str.toLowerCase().relace()
 }

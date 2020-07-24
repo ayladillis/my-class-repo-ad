@@ -42,8 +42,8 @@ app.get("/", function(req, res) {
 
     // We then use the retrieved records from the database to populate our HTML file.
     for (var i = 0; i < result.length; i++) {
-      html += "<li><p> ID: " + result[i].id + "</p>";
-      html += "<p>School: " + result[i].name + " </p></li>";
+              html += "<li><p> ID: " + result[i].id + "</p>";
+              html += "<p>School: " + result[i].name + " </p></li>";
     }
 
     // We close our unordered list.

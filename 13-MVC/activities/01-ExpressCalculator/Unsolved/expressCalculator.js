@@ -11,7 +11,13 @@ var app = express();
 // Routes
 // What routes do you need to have? Which ones are optional?
 // TODO Add your routes here
-app.get("", function(req, res) {
+app.get("/:operation/:numOne/:numTwo", function(req, res) {
+ 
+  var operation = req.params.operation;
+
+  var numOne = parseInt(req.params.numOne);
+  var numTwo = parseInt(req.params.numTwo);
+  var result;
 
   // TODO parse out the variables from the request
   // Parameters are received from the URL
@@ -24,16 +30,24 @@ app.get("", function(req, res) {
   switch (operation) {
   // BONUS - How could you use * + etc. inside the app.get()?
   case "add":
+    case '+':
     // Add your logic here. Pun intended.
+    result = numOne + numTwo;
     break;
   case "subtract":
+    case '-':
     // Subtract logic
+    result = numOne - numTwo;
     break;
   case "multiply":
+    case '*':
     // Multiply
+    result = numOne * numTwo;
     break;
   case "divide":
+    case '/':
     // Divide
+    result = numOne / numTwo;
     break;
   default:
     // Handle anything that isn't specified
