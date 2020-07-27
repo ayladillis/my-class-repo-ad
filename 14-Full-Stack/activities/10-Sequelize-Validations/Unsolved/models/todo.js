@@ -7,7 +7,9 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Todo = sequelize.define("Todo", {
-    text: DataTypes.STRING,
+    text: {type:sequelize.STRING, 
+      validate:{is: ["^[a-z]+$",'i'], 
+      len: [1,140]}},
     complete: DataTypes.BOOLEAN
   });
   return Todo;
