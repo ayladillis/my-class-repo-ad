@@ -7,11 +7,11 @@ var mysql = require("mysql");
 
 // Set up our connection information
 var connection = mysql.createConnection({
-  host: "",
+  host: "localhost",
   port: 3306,
-  user: "",
-  password: "",
-  database: ""
+  user: "root",
+  password: "password",
+  database: "chirpy_db"
 });
 
 // Connect to the database

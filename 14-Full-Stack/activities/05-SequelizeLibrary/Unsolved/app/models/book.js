@@ -1,7 +1,9 @@
 // Dependencies
 // =============================================================
-
+const Sequelize = require('sequelize');
 // Require the sequelize library
+const connection = require('../config/connection.js');
+const sequelize 
 // Require the connection to the database (connection.js)
 
 // Create a "Book" model with the following configuration
