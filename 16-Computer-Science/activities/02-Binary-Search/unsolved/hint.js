@@ -3,6 +3,23 @@
 //Set some starting values:
 //maxIndex
 //minIndex
+let targetNum;
+
+const binarySearch = (array, targetNum)=> {
+    let minIndex = array[0];
+    let maxIndex = array[array.length -1];
+    while(minIndex <= maxIndex){
+        let currentIndex = array.length/2
+        let currentElement = array[currentIndex]
+        if(currentElement = targetNum){
+            console.log('found it')
+        }
+        }
+        if(currentIndex > targetNum){
+            minIndex = currentIndex + 1
+        }
+    }
+
 
 //While minIndex <= maxIndex
 // Get a position near the middle and check to if that currentIndex matches your target 
