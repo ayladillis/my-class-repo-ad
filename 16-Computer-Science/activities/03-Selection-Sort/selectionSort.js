@@ -35,15 +35,16 @@ function selectionSort(items) {
   var len = items.length;
   var min;
 
-  for (var i = 0; i < len; i++) {
+  for (var i = 0; i < len; i++) { // outer for loop
 
     // set index of minimum to this position
     min = i;
 
     // check the rest of the array to see if anything is smaller
+    // nested for loop scanning though array 
     for (var j = i + 1; j < len; j++) {
-      if (items[j] < items[min]) {
-        min = j;
+      if (items[j] < items[min]) { // checking to see if element is less than first position 
+        min = j; 
       }
     }
 
