@@ -1,3 +1,4 @@
+// write out a few variable inputs before starting to code
 var input = [9,4,3,6,8,2];
 var input2 = [13,22,20,18,15,16];
 var input3 = [0,2,3,4];

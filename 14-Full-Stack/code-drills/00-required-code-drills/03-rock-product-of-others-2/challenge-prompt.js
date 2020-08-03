@@ -7,8 +7,8 @@
 // at the index of the current element
 function otherProduct (arr) {
   // -------------------- Your Code Here --------------------
-
-
+  var returnArr = [];
+ 
 
 
   // -------------------- End Code Area ---------------------

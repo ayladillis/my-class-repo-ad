@@ -36,3 +36,4 @@ newStack.push(2);
 newStack.push(4);
 
 console.log(newStack.peek());
+

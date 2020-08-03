@@ -15,6 +15,7 @@ function toLowerCase(str) {
 
 // Should be "hello world"
 console.log(toLowerCase("Hello World"));
+// loop through the string looking for upper case letters
 
 // Should be "test"
 console.log(toLowerCase("Test"));

@@ -18,4 +18,13 @@ What is the running time of...
 
 * Finding duplicates in an array?
 
+two ways to push element to the begining of an array
+===========================================
+var numbers = [31.9, 35.3, 42.4, 42.4, 60.8]
+numbers.upshift(44);
 
+==============================================
+for (var i=myArray.length; i>=0; i--){
+    myArray[i] = myArray[i-1]
+}
+myArray[0] = -1;
