@@ -41,21 +41,40 @@ app.post("/submit", ({ body }, res) => {
 });
 
 // Find all books marked as read
-app.get("/read", (req, res) => {});
-
+app.get("/read", (req, res) => {
+db.books.find({}, function (err, data){
+  if (err) throw err
+  res.json(data);
+  });
+});
 // Find all books marked as unread
-app.get("/unread", (req, res) => {});
+app.get("/unread", (req, res) => {
+  db.books.find({}, function (err, data){
+    if (err) throw err
+    res.json(data);
+    });
+});
 
 // Mark a book as having been read
 app.put("/markread/:id", (req, res) => {
   // Remember: when searching by an id, the id needs to be passed in
   // as (mongojs.ObjectId(IdYouWantToFind))
+  const id = req.params.id
+
+  db.books.update({"id": (mongojs.ObjectId(id))}, {$set: {read: true}}, function(err, data){
+  if (err)  throw err
+  res.json(data)
+  });
 });
 
 // Mark a book as having been not read
 app.put("/markunread/:id", (req, res) => {
   // Remember: when searching by an id, the id needs to be passed in
   // as (mongojs.ObjectId(IdYouWantToFind))
+  const id = req.params.id
+  db.books.update({"id": (mongojs.ObjectId(id))}, {$set: {read: false}}, function(err, data){
+  if (err)  throw err
+  })
 });
 
 // Listen on port 3000
