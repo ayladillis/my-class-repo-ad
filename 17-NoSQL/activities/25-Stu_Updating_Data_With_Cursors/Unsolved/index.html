@@ -25,6 +25,7 @@
 
       // Opens a transaction, accesses the toDoList objectStore and statusIndex.
       request.onsuccess = () => {
+        console.log("request.onsuccess=> Executed");
         const db = request.result;
         const transaction = db.transaction(["toDoList"], "readwrite");
         const toDoListStore = transaction.objectStore("toDoList");
@@ -40,6 +41,16 @@
         const getCursorRequest = toDoListStore.openCursor();
         getCursorRequest.onsuccess = e => {
           // CODE HERE
+          console.log("getCursorRequest.onsuccess => Executed");
+          const cursor = e.target.result;
+          console.log(cursor);
+          if (cursor){
+            console.log(cursor.value.status);
+            cursor.continue();
+          } else {
+            console.log();
+          }
+
         };
       };
     </script>

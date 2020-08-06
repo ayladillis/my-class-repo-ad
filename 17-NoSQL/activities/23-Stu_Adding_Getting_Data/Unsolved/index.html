@@ -14,13 +14,38 @@
       request.onupgradeneeded = event => {
         const db = event.target.result;
        // CODE HERE
+        const toDoListStore = db.createObjectStore("toDoList", {keyPath: "listID"});
+        // Creates a statusIndex that we can query on.
+        toDoListStore.createIndex("due_date", "due_date"); 
+
       }
 
-      
       request.onsuccess = () => {
+        console.log("test");
         const db = request.result;
         // CODE HERE
-      };
+        //The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object store.
+        const transaction = db.transaction(["toDoList"], "readwrite");
+        const toDoListStore = transaction.objectStore("toDoList");
+        const statusIndex = toDoListStore.index("due_date");
+  
+        // Adds data to our objectStore
+        toDoListStore.add({ listID: "1", due_date: "today" });
+        toDoListStore.add({ listID: "2", due_date: "Wednesday" });
+        toDoListStore.add({ listID: "3", due_date: "December" });
+        toDoListStore.add({ listID: "4", due_date: "2021" });
+
+        // Return an item by keyPath
+        const getRequest = toDoListStore.get("1");
+        getRequest.onsuccess = () => {
+          console.log(getRequest.result);
+        };
+
+        // Return an item by index
+        const getRequestIdx = statusIndex.getAll("complete");
+      //   getRequestIdx.onsuccess = () => {
+      //     console.log(getRequestIdx.result); 
+      // };
 
     </script>
   </body>

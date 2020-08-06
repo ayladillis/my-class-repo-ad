@@ -13,4 +13,16 @@
 <script>
 
 // CODE HERE
+const request = indexedDB.open("firstDatabase", 1);
+console.log(request);
+
+request.onerror = err => {
+    console.log(err);
+  }
+  
+  request.onsuccess = event => {
+    console.log(request.result.name);
+    
+  };
+
 </script>
