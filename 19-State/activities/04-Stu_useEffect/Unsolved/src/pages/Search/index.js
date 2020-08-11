@@ -1,24 +1,23 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
 import SearchForm from "../../components/SearchForm";
 import SearchResults from "../../components/SearchResults";
 import Alert from "../../components/Alert";
 
-class Search extends Component {
-  state = {
+function Search() {
+  const [searchState, setSearchState] = useState({
     search: "Wikipedia",
     title: "",
     description: "",
     url: "",
     error: ""
-  };
+  });
 
-  // When the component mounts, update the title to be Wikipedia Searcher
-  componentDidMount() {
+  useEffect(() => {
     document.title = "Wikipedia Searcher";
 
-    API.searchTerms(this.state.search)
+    API.searchTerms(searchState.search)
       .then(res => {
         if (res.data.length === 0) {
           throw new Error("No results found.");
@@ -26,26 +25,26 @@ class Search extends Component {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        this.setState({
+        setSearchState({
           title: res.data[1],
           description: res.data[2][0],
           url: res.data[3][0],
           error: ""
         });
       })
-      .catch(err => this.setState({ error: err.message }));
-  }
+      .catch(err => setSearchState({ error: err.message }));
+  }, []);
 
-  handleInputChange = event => {
-    this.setState({ search: event.target.value });
+  const handleInputChange = event => {
+    setSearchState({ search: event.target.value });
   };
 
-  handleFormSubmit = event => {
+  const handleFormSubmit = event => {
     event.preventDefault();
-    if (!this.state.search) {
+    if (!searchState.search) {
       return;
     }
-    API.searchTerms(this.state.search)
+    API.searchTerms(searchState.search)
       .then(res => {
         if (res.data.length === 0) {
           throw new Error("No results found.");
@@ -53,37 +52,35 @@ class Search extends Component {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        this.setState({
+        setSearchState({
           title: res.data[1],
           description: res.data[2][0],
           url: res.data[3][0],
           error: ""
         });
       })
-      .catch(err => this.setState({ error: err.message }));
+      .catch(err => setSearchState({ error: err.message }));
   };
-  render() {
-    return (
-      <div>
-        <Container style={{ minHeight: "100vh" }}>
-          <h1 className="text-center">Search For Anything on Wikipedia</h1>
-          <Alert type="danger" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}>
-            {this.state.error}
-          </Alert>
-          <SearchForm
-            handleFormSubmit={this.handleFormSubmit}
-            handleInputChange={this.handleInputChange}
-            results={this.state.search}
-          />
-          <SearchResults
-            title={this.state.title}
-            description={this.state.description}
-            url={this.state.url}
-          />
-        </Container>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Container style={{ minHeight: "100vh" }}>
+        <h1 className="text-center">Search For Anything on Wikipedia</h1>
+        <Alert type="danger" style={{ opacity: searchState.error ? 1 : 0, marginBottom: 10 }}>
+          {searchState.error}
+        </Alert>
+        <SearchForm
+          handleFormSubmit={handleFormSubmit}
+          handleInputChange={handleInputChange}
+          results={searchState.search}
+        />
+        <SearchResults
+          title={searchState.title}
+          description={searchState.description}
+          url={searchState.url}
+        />
+      </Container>
+    </div>
+  );
+};
 
 export default Search;
